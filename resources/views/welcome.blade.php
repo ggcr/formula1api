@@ -25,7 +25,7 @@
                     <h1 class="text-6xl pl-96" >API</h1>
                 </div>
                 <div class="font-poppins text-titlePink font-regular absolute ml-4 mt-72 pb-24 w-5/12 text-center text-xl">
-                    <p>The <strong><a href="www.formula1.com">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
+                    <p>The <strong><a href="https://www.formula1.com/">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
                 </div>
                 <div class="font-poppins text-titlePink font-regular absolute ml-4 top-96 mt-12 w-5/12 text-center text-xl">
                         <button class="inline-block	bg-purple-300 px-14 py-4 mr-5 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
