@@ -12,42 +12,42 @@
         </style>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="antialiased mx-60 mt-5 bg-pink-pattern relative">
+    <body class="antialiased mt-5 bg-pink-pattern">
         <section class="px-6 py-4 w-full">
             <nav class="select-none w-full font-poppins font-bold text-l pb-12">
                 <a class="pr-10 float-right" href="#">ABOUT</a>
                 <a class="px-8 float-right" href="#">DOCS</a>
             </nav>
-            <header class="relative">
-                <div class="select-text z-10 antialiased font-formula text-titlePink font-medium absolute -ml-12 mt-12">
-                    <h1 class="text-6xl pl-20">THE</h1>
-                    <h1 class="text-8xl">FORMULA 1</h1>
-                    <h1 class="text-6xl pl-96" >API</h1>
+            <header class="h-screen w-screen">
+                <div class="xl:ml-40 lg:ml-10">
+                    <div class="select-text z-10 antialiased font-formula text-titlePink font-medium mt-12 lg:absolute md:fixed sm:ixed">
+                        <h1 class="pl-20 text-6xl">THE</h1>
+                        <h1 class="text-8xl">FORMULA 1</h1>
+                        <h1 class="text-6xl lg:pl-96 sm:pl-60" >API</h1>
+                    </div>
+                    <div class="font-poppins text-titlePink font-regular absolute  mt-72 pb-24 w-5/12 text-center text-xl">
+                        <p>The <strong><a href="https://www.formula1.com/" target="_blank" >FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
+                    </div>
+                    <div class="font-poppins text-titlePink font-regular absolute top-96 mt-24 w-5/12 text-center text-xl">
+                            <button class="inline-block	bg-purple-300 px-14 py-4 mr-5 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
+                            Try REST
+                            <img src="/img/link.png" class="h-6 float-right -mr-2 pb-0.5 " alt="Link image.">
+                        </button>
+                        <button class="inline-block	bg-purple-300 px-10 py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
+                            Try GraphQL
+                            <img src="/img/link.png" class="h-6 float-right -mr-2 pb-0.5 " alt="Link image.">
+                        </button>
+                    </div>
                 </div>
-                <div class="font-poppins text-titlePink font-regular absolute ml-4 mt-72 pb-24 w-5/12 text-center text-xl">
-                    <p>The <strong><a href="https://www.formula1.com/" target="_blank" >FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
-                </div>
-                <div class="font-poppins text-titlePink font-regular absolute ml-4 top-96 mt-12 w-5/12 text-center text-xl">
-                        <button class="inline-block	bg-purple-300 px-14 py-4 mr-5 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
-                        Try REST
-                        <img src="/img/link.png" class="h-6 float-right -mr-2 pb-0.5 " alt="Link image.">
-                    </button>
-                    <button class="inline-block	bg-purple-300 px-10 py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
-                        Try GraphQL
-                        <img src="/img/link.png" class="h-6 float-right -mr-2 pb-0.5 " alt="Link image.">
-                    </button>
-                </div>
-
-                <div class="relative">
-                    <img class="pointer-events-none -mr-56 -mt-8 rounded-xl mix-blend-multiply object-contain w-4/5 float-right" src="/img/image.png" alt="Formula One Illustration in pink.">
-                </div>
+                <img class="bg-fixed w-43 pointer-events-none -mt-8 rounded-xl mix-blend-multiply float-right" src="/img/image.png" alt="Formula One Illustration in pink.">
 
                 <div class="w-1/12 mx-auto">
-                    <img class="pointer-events-none fixed bottom-5 h-28 animate-pulse" src="/img/swipe.png" alt="Swipe down">
+                    <img class="absolute pointer-events-none fixed bottom-5 h-28 animate-pulse " src="/img/swipe.png" alt="Swipe down">
                 </div>
             </header>
-            <main></main>
-            <footer></footer>
+            <main>
+
+            </main>
         </section>
     </body>
 </html>

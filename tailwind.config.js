@@ -24,6 +24,10 @@ module.exports = {
           }),
           colors: {
               titlePink: '#500C52',
+          },
+
+          width: {
+              '43': '50rem',
           }
       },
     },
