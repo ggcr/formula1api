@@ -24,6 +24,7 @@ module.exports = {
           }),
           colors: {
               titlePink: '#500C52',
+              whiteWave: '#f3f4f5',
           },
 
           width: {

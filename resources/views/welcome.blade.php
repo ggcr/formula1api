@@ -12,7 +12,7 @@
         </style>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="antialiased bg-pink-pattern w-screen overflow-x-hidden">
+    <body class="antialiased bg-pink-pattern w-screen overflow-x-hidden bg-whiteWave">
         <section class="mx-6 h-screen">
             <nav class="w-screen font-poppins font-bold text-lg pb-12 pt-5">
                 <a class="pr-10 float-right" href="#">ABOUT</a>
@@ -44,11 +44,788 @@
                     <img class="mx-auto pointer-events-none bottom-5 h-20 lg:h-28 animate-pulse " src="/img/swipe.png" alt="Swipe down">
                 </div>
             </header>
-            <main class="mt-16 pt-4">
-                <div class="z-10 select-text font-formula text-titlePink font-medium">
-                    <p class="text-center text-5xl lg:text-8xl">FORMULA 1</p>
-                </div>
-            </main>
         </section>
+
+        <svg class="-mt-10 lg:-mt-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,128L80,122.7C160,117,320,107,480,128C640,149,800,203,960,208C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>            <article>
+
+        <main class="mt-0 mx-0 h-full bg-whiteWave">
+            <!-- This example requires Tailwind CSS v2.0+ -->
+            <div class="flex flex-col mx-10 pb-20">
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        #
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        DRIVER NAME
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        TEAM
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        POINTS
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        LAST RACE
+                                    </th>
+                                    <th scope="col" class="relative px-6 py-3">
+                                        <span class="sr-only">Query</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                1.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/verstappen.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Max VERSTAPPEN 🇳🇱
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Red Bull Racing Honda</div>
+                                        <div class="text-sm text-gray-500">Milton Keynes, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  131 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                2.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/hamilto.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Lewis HAMILTON 🇬🇧
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Mercedes-AMG Petronas F1 Team</div>
+                                        <div class="text-sm text-gray-500">Brackley, Northamptonshire, United Kingdom</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  119 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                3.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/perez.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Sergio 'CHECO' Pérez 🇲🇽
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Red Bull Racing Honda</div>
+                                        <div class="text-sm text-gray-500">Milton Keynes, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  84 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                4.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/norris.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Lando NORRIS 🇬🇧
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">McLaren F1 Team</div>
+                                        <div class="text-sm text-gray-500">Woking, Surrey, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  76 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                5.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/bottas.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Valtteri BOTTAS 🇫🇮
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Mercedes-AMG Petronas F1 Team</div>
+                                        <div class="text-sm text-gray-500">Brackley, Northamptonshire, United Kingdom</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  59 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                6.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/leclerc.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Charles LECLERC 🇲🇨
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Scuderia Ferrari Mission Winnow</div>
+                                        <div class="text-sm text-gray-500">Maranello, Italy</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  52 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                7.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/sainz.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Carlos SAINZ 🇪🇸
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Scuderia Ferrari Mission Winnow</div>
+                                        <div class="text-sm text-gray-500">Maranello, Italy</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  42 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                8.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/gasly.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Pierre GASLY 🇫🇷
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Scuderia AlphaTauri Honda</div>
+                                        <div class="text-sm text-gray-500">Faenza, Italy</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  37 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                9.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/ric.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Daniel RICCIARDO 🇦🇺
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">McLaren F1 Team</div>
+                                        <div class="text-sm text-gray-500">Woking, Surrey, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  34 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                10.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/vet.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Sebastian VETTEL 🇩🇪
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Aston Martin Cognizant F1 Team</div>
+                                        <div class="text-sm text-gray-500">Silverstone, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-100 text-green-800 font-formula">
+                  30 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                11.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/alo.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Fernando ALONSO 🇪🇸
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Alpine F1 Team</div>
+                                        <div class="text-sm text-gray-500">Enstone, Oxfordshire, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-yellow-100 text-green-800 font-formula">
+                  17 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                12.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/ocon.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Esteban OCON 🇫🇷
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Alpine F1 Team</div>
+                                        <div class="text-sm text-gray-500">Enstone, Oxfordshire, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-yellow-100 text-green-800 font-formula">
+                  12 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                13.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/stroll.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Lance STROLL 🇨🇦
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Aston Martin Cognizant F1 Team</div>
+                                        <div class="text-sm text-gray-500">Silverstone, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-yellow-100 text-green-800 font-formula">
+                  10 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                14.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/tsu.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Yuki TSUNODA 🇯🇵
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Scuderia AlphaTauri Honda</div>
+                                        <div class="text-sm text-gray-500">Faenza, Italy</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-yellow-100 text-green-800 font-formula">
+                  8 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                15.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/verstappen.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Kimi RÄIKKÖNEN 🇫🇮
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Alfa Romeo Racing Orlen</div>
+                                        <div class="text-sm text-gray-500">Hinwil, Zürich, Switzerland</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-yellow-100 text-green-800 font-formula">
+                  1 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                16.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/gio.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Antonio GIOVINAZZI 🇮🇹
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Alfa Romeo Racing Orlen</div>
+                                        <div class="text-sm text-gray-500">Hinwil, Zürich, Switzerland</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-red-100 text-green-800 font-formula">
+                  1 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                17.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/russ.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    George RUSSELL 🇬🇧
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Williams Racing</div>
+                                        <div class="text-sm text-gray-500">Grove, Oxfordshire, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-red-100 text-green-800 font-formula">
+                  0 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                18.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/sch.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Mick SCHUMACHER 🇩🇪
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Uralkali Haas F1 TeaM</div>
+                                        <div class="text-sm text-gray-500">Banbury, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-red-100 text-green-800 font-formula">
+                  0 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                19.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/EGG.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Nikita MAZEPIN 🇷🇺
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Uralkali Haas F1 Team</div>
+                                        <div class="text-sm text-gray-500">Banbury, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-red-100 text-green-800 font-formula">
+                  0 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-4 whitespace-nowrap">
+                                        <div class="ml-3">
+                                            <div class="text-sm font-medium text-gray-900 text-xl font-formula">
+                                                20.
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-20 w-20">
+                                                <img class="h-20 w-20 rounded-b-3xl" src="/img/latifi.png" alt="">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-regular text-gray-900 font-formula">
+                                                    Nicholas LATIFI 🇨🇦
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900">Williams Racing</div>
+                                        <div class="text-sm text-gray-500">Grove, Oxfordshire, England, UK</div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-red-100 text-green-800 font-formula">
+                  0 pts
+                </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        Circuit Paul Ricard, France
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    </td>
+                                </tr>
+
+                                <!-- More people... -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </body>
 </html>
