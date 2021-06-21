@@ -2,6 +2,13 @@
 
 ![output](./public/img/UI-landing.png)
 
+# To-Do
+- Responsive layout from desktop (lg) to mobile (sm) layout.
+- Añadir pestañas en la Grid para DRIVER CHAMPIONSHIP y TEAM CHAMPIONSHIP.
+- Añadir tabs para distintos años.
+- Automatizar con blade laravel.
+- Tabs con Vue (?)
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
