@@ -14,23 +14,23 @@
     </head>
     <body class="antialiased bg-pink-pattern w-screen overflow-x-hidden bg-whiteWave">
         <section class="mx-6 h-screen">
-            <nav class="w-screen font-poppins font-bold text-lg pb-12 pt-5">
-                <a class="pr-10 float-right" href="#">ABOUT</a>
+            <nav class="w-screen font-poppins font-semibold text-lg pb-12 pt-5">
+                <a class="pr-10 lg:pr-20 float-right" href="#">ABOUT</a>
                 <a class="px-8 float-right" href="#">DOCS</a>
             </nav>
             <header class="">
-                    <div class="z-10 select-text font-formula text-titlePink font-medium lg:static lg:w-1/2 md:w-1/2 sm:fixed lg:ml-28 lg:mt-24">
-                        <p class="text-left text-4xl ml-20 lg:text-5xl">THE</p>
-                        <p class="text-center text-5xl lg:text-8xl">FORMULA 1</p>
-                        <p class="text-right text-4xl mr-24 lg:text-5xl">API</p>
+                    <div class="z-10 select-text font-formula text-titlePink font-medium lg:static lg:w-1/2 sm:static md:static md:w-auto lg:ml-28 lg:mt-24">
+                        <p class="text-center text-4xl sm:ml-20 lg:text-5xl md:ml-64 lg:-ml-80">THE</p>
+                        <p class="text-center whitespace-nowrap text-5xl lg:text-8xl">FORMULA 1</p>
+                        <p class="text-center text-4xl sm:mr-24 lg:text-5xl md:mr-64 lg:mr-32">API</p>
                     </div>
-                    <div class="select-none pointer-events-none w-screen lg:w-auto lg:right-0 lg:absolute lg:top-32">
+                    <div class="select-none pointer-events-none w-screen lg:w-auto md:w-auto lg:right-0 lg:absolute lg:top-32">
                         <img class="z-0 w-43 pointer-events-none -mt-8 lg:mr-12 rounded-xl mix-blend-multiply float-right bg-fixed" src="/img/image.png" alt="Formula One Illustration in pink.">
                     </div>
-                    <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:fixed sm:fixed text-center text-lg lg:text-xl">
+                    <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:w-auto sm:fixed md:absolute text-center text-lg lg:text-xl">
                         <p>The <strong><a href="https://www.formula1.com/" target="_blank">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
                     </div>
-                    <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:fixed sm:fixed lg:w-2/5 lg:ml-0 lg:mt-0">
+                    <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:static sm:static lg:w-2/5 lg:ml-0 lg:mt-0">
                         <button class="inline-block	bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
                             Try REST
                             <img src="/img/link.png" class="h-5 lg:h-6 float-right -mr-2" alt="Link image.">
@@ -49,9 +49,8 @@
         <svg class="-mt-10 lg:-mt-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,128L80,122.7C160,117,320,107,480,128C640,149,800,203,960,208C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>            <article>
 
         <main class="mt-0 mx-0 h-full bg-whiteWave">
-            <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="flex flex-col mx-10 pb-20">
-                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="-my-2 overflow-x-auto md:-mx-6 lg:-mx-8">
                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -728,7 +727,7 @@
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-900">Uralkali Haas F1 TeaM</div>
+                                        <div class="text-sm text-gray-900">Uralkali Haas F1 Team</div>
                                         <div class="text-sm text-gray-500">Banbury, England, UK</div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
