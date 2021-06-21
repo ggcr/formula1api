@@ -24,18 +24,18 @@
                         <p class="text-center whitespace-nowrap text-5xl lg:text-8xl">FORMULA 1</p>
                         <p class="text-center text-4xl sm:mr-24 lg:text-5xl md:mr-64 lg:mr-32">API</p>
                     </div>
-                    <div class="select-none pointer-events-none w-screen lg:w-auto md:w-auto lg:right-0 lg:absolute lg:top-32">
+                    <div class="select-none pointer-events-none w-screen lg:w-auto md:w-auto md:static lg:right-0 lg:absolute lg:top-32">
                         <img class="z-0 w-43 pointer-events-none -mt-8 lg:mr-12 rounded-xl mix-blend-multiply float-right bg-fixed" src="/img/image.png" alt="Formula One Illustration in pink.">
                     </div>
-                    <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:w-auto sm:fixed md:absolute text-center text-lg lg:text-xl">
+                    <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:w-screen sm:fixed md:absolute text-center text-lg lg:text-xl">
                         <p>The <strong><a href="https://www.formula1.com/" target="_blank">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
                     </div>
                     <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:static sm:static lg:w-2/5 lg:ml-0 lg:mt-0">
-                        <button class="inline-block	bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
+                        <button class="z-10 inline-block	bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
                             Try REST
                             <img src="/img/link.png" class="h-5 lg:h-6 float-right -mr-2" alt="Link image.">
                         </button>
-                        <button class="inline-block	bg-purple-300 px-8 lg:px-10 py-3 lg:py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400">
+                        <button class="z-10 inline-block	bg-purple-300 px-8 lg:px-10 py-3 lg:py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 md:mr-5">
                             Try GraphQL
                             <img src="/img/link.png" class="h-5 lg:h-6  float-right -mr-2" alt="Link image.">
                         </button>
