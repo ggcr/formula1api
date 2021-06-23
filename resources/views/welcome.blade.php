@@ -18,7 +18,7 @@
         <a class="pr-10 lg:pr-20 float-right" href="#">ABOUT</a>
         <a class="px-8 float-right" href="#">DOCS</a>
     </nav>
-    <header class="">
+    <header class="static">
         <div class="z-10 select-text font-formula text-titlePink font-medium lg:static lg:w-1/2 sm:static md:static md:w-auto lg:ml-28 lg:mt-24">
             <p class="text-center text-4xl sm:ml-20 lg:text-5xl md:ml-64 lg:-ml-80">THE</p>
             <p class="text-center whitespace-nowrap text-5xl lg:text-8xl">FORMULA 1</p>
@@ -27,7 +27,7 @@
         <div class="select-none pointer-events-none w-screen lg:w-auto md:w-auto md:static lg:right-0 lg:absolute lg:top-32">
             <img class="z-0 w-43 pointer-events-none -mt-8 lg:mr-12 rounded-xl mix-blend-multiply float-right bg-fixed" src="/img/image.png" alt="Formula One Illustration in pink.">
         </div>
-        <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:w-screen sm:fixed md:absolute text-center text-lg lg:text-xl">
+        <div class="z-10 font-poppins text-titlePink font-regular lg:static lg:ml-44 lg:mt-10 lg:w-2/5 md:w-screen sm:static md:absolute  text-center text-lg lg:text-xl">
             <p>The <strong><a href="https://www.formula1.com/" target="_blank">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
         </div>
         <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:static sm:static lg:w-2/5 lg:ml-0 lg:mt-0">
@@ -605,7 +605,7 @@
                                 <td class="px-4 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-20 w-20">
-                                            <img class="h-20 w-20 rounded-b-3xl" src="/img/verstappen.png" alt="">
+                                            <img class="h-20 w-20 rounded-b-3xl" src="/img/kimi.png" alt="">
                                         </div>
                                         <div class="ml-4">
                                             <div class="text-sm font-regular text-gray-900 font-formula">
