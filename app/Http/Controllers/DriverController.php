@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Driver;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class DriverController extends Controller
@@ -14,7 +15,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        return Driver   ::all();
+        return Driver::all();
     }
 
     /**
@@ -25,7 +26,14 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'nationality' => 'required',
+            'number' => 'required',
+            'number_url' => 'required',
+            'image_url' => 'required'
+        ]);
+        return Driver::create($request->all());
     }
 
     /**
@@ -36,7 +44,7 @@ class DriverController extends Controller
      */
     public function show($id)
     {
-        //
+        return Driver::find($id);
     }
 
     /**
@@ -48,17 +56,34 @@ class DriverController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $d = Driver::find($id);
+        $d->update($request->all());
+        return $d;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function destroy(int $id): JsonResponse
+    {
+        $queryRes = Driver::destroy($id);
+        if($queryRes == 1) {
+            return response()->json(['success' => 'success'], 200);
+        }
+        return response()->json(['not found' => 'not found'], 401);
+    }
+
+    /**
+     * Search for a name.
+     *
+     * @param  str name
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function search($name)
     {
-        //
+        return Driver::where('name', 'like', '%'.$name.'%')->get();
     }
 }

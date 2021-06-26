@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DriverController;
+use \App\Http\Controllers\RacesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,17 +15,12 @@ use App\Http\Controllers\DriverController;
 |
 */
 
-Route::get('/driver', [DriverController::class, 'index']);
+Route::resource('driver', DriverController::class);
+Route::resource('race', RacesController::class);
+Route::get('/driver/search/{name}', [DriverController::class, 'search']);
 
-//Route::post('/driver', function() {
-//    return Driver::create([
-//        'name' => 'Max Verstappen',
-//        'nationality' => 'NLD',
-//        'number' => 33,
-//        'number_url' => 'http:/google.com',
-//        'image_url' => 'http:/google.com'
-//    ]);
-//});
+//Route::get('/driver', [DriverController::class, 'index']);
+//Route::post('/driver', [DriverController::class, 'store']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
