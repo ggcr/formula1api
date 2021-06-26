@@ -29,6 +29,7 @@ class RacesController extends Controller
         $request->validate([
             'race_name' => 'required',
             'circuit_name' => 'required',
+            'country' => 'required',
             'season' => 'required',
             'date' => 'required',
             'race_results' => 'required',
@@ -40,45 +41,51 @@ class RacesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Races  $races
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Races $races)
+    public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Races  $races
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Races $races)
-    {
-        //
+        return Races::find($id);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Races  $races
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Races $races)
+    public function update(Request $request, $id)
     {
-        //
+        $d = Races::find($id);
+        $d->update($request->all());
+        return $d;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Races  $races
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function destroy(int $id): JsonResponse
+    {
+        $queryRes = Races::destroy($id);
+        if($queryRes == 1) {
+            return response()->json(['success' => 'success'], 200);
+        }
+        return response()->json(['not found' => 'not found'], 401);
+    }
+
+    /**
+     * Search for a name.
+     *
+     * @param  str name
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Races $races)
+    public function search($name)
     {
-        //
+        return Races::where('race_name', 'like', '%'.$name.'%')->get();
     }
 }

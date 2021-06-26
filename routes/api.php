@@ -18,6 +18,12 @@ use \App\Http\Controllers\RacesController;
 Route::resource('driver', DriverController::class);
 Route::resource('race', RacesController::class);
 Route::get('/driver/search/{name}', [DriverController::class, 'search']);
+Route::get('/', function() {
+    return response()->json([
+        'drivers' => 'http://127.0.0.1:9999/api/driver',
+        'races' => 'http://127.0.0.1:9999/api/race',
+    ]);
+});
 
 //Route::get('/driver', [DriverController::class, 'index']);
 //Route::post('/driver', [DriverController::class, 'store']);

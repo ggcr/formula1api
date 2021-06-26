@@ -3,9 +3,8 @@
 ![output](./public/img/UI-landing.png)
 
 # To-Do
-- Responsive layout from desktop (lg) to mobile (sm) layout.
 - Añadir pestañas en la Grid para DRIVER CHAMPIONSHIP y TEAM CHAMPIONSHIP.
-- Añadir tabs para distintos años.
+- Añadir tabs para distintos años y SEASONS.
 - Automatizar con blade laravel.
 - Tabs con Vue (?)
 

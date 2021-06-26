@@ -17,6 +17,7 @@ class Races extends Model
     protected $fillable = [
         'race_name',
         'circuit_name',
+        'country',
         'season',
         'date',
         'race_results',
