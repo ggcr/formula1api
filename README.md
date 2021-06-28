@@ -9,6 +9,8 @@
 - Tabs con Vue (?)
 - Hacer uso de caching para evitar el sobreuso del calculo de puntos, last race, etc
 - Hacer uso de clockwise para evitar alto numero de database queries (with attribute lv8)
+- Numero de queries recibidas...
+- Numero de users servidos...
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>

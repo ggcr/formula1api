@@ -16,6 +16,7 @@ class CreateDriversTable extends Migration
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('apodo');
             $table->string('nationality');
             $table->integer('number');
             $table->string('number_url');

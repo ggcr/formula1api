@@ -28,6 +28,7 @@ class DriverController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'apodo' => '',
             'nationality' => 'required',
             'number' => 'required',
             'number_url' => 'required',
