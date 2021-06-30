@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Driver;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
@@ -15,5 +16,6 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
+    $drivers = Driver::all();
     return view('welcome');
 });
