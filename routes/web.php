@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Driver;
+use \App\Models\Races;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    $drivers = Driver::all();
-    return view('welcome');
+    $d = Driver::all();
+    $r = Races::all();
+    return view('welcome', [
+        'drivers' => $d,
+        'races' => $r
+    ]);
 });
