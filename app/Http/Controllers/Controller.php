@@ -26,7 +26,7 @@ class Controller extends BaseController
                 $request = Request::create(parse_url($value['driver'])['path'], 'GET');
                 $r = app()->handle($request)->getContent();
                 $json = json_decode($r,true);
-                var_dump($json);
+                dump($json);
                 $driver = $drivers->where('id', $json['id']);
                 switch ($key) {
                     case 1:
