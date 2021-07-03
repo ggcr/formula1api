@@ -3,6 +3,7 @@
 use App\Models\Driver;
 use \App\Models\Races;
 use \App\Http\Controllers\RacesController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    $d = Driver::all();
+    $d = (new Controller)->calculatePointsForAllDrivers();
     return view('welcome', [
         'drivers' => $d
     ]);

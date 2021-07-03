@@ -7,55 +7,81 @@ use App\Models\Races;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function calculatePointsForAllDrivers($season)
+    public function calculatePointsForAllDrivers()
     {
-        $season_races = (new RacesController)->GetSeasonRaces($season);
-        $season_drivers = Driver::all();
-        $driver['points'] = 9999999;
-        $points = 0;
-        foreach ($races as $index => $race) {
-            dd($race['driver']);
-            switch ($index) {
-                case 1:
-                    $points += 25;
-                    break;
-                case 2:
-                    $points += 18;
-                    break;
-                case 3:
-                    $points += 15;
-                    break;
-                case 4:
-                    $points += 12;
-                    break;
-                case 5:
-                    $points += 10;
-                    break;
-                case 6:
-                    $points += 8;
-                    break;
-                case 7:
-                    $points += 6;
-                    break;
-                case 8:
-                    $points += 4;
-                    break;
-                case 9:
-                    $points += 2;
-                    break;
-                case 10:
-                    $points += 1;
-                    break;
-                default:
-                    $points += 0;
-                    break;
+        $races = Races::all('race_results')->toArray();
+        $drivers = Driver::all();
+        $i = 0;
+        foreach ($races as $race) {
+            foreach ($race['race_results'] as $key => $value) {
+                $request = Request::create(parse_url($value['driver'])['path'], 'GET');
+                $request->server->add(['SERVER_PORT'=>'8000']);
+                $request->server->add(['SERVER_NAME'=>'127.0.0.1']);
+                $r = json_decode(app()->handle($request)->getContent(), true)[0];
+
+                $driver = $drivers->where('id', $r['id'])[0];
+
+                switch ($key) {
+                    case 1:
+                        $points = 25;
+                        break;
+                    case 2:
+                        $points = 18;
+                        break;
+                    case 3:
+                        $points = 15;
+                        break;
+                    case 4:
+                        $points = 12;
+                        break;
+                    case 5:
+                        $points = 10;
+                        break;
+                    case 6:
+                        $points = 8;
+                        break;
+                    case 7:
+                        $points = 6;
+                        break;
+                    case 8:
+                        $points = 4;
+                        break;
+                    case 9:
+                        $points = 2;
+                        break;
+                    case 10:
+                        $points = 1;
+                        break;
+                    default:
+                        $points = 0;
+                        break;
+                }
+
+                if (isset($driver['points'])) {
+                    $driver->points += $points;
+                }
+                else {
+                    $driver->points = $points;
+                }
+
+                if (!isset($driver['team_name'])) {
+                    $driver->team_name = $value['team'];
+                }
+
+
             }
+            $i += 1;
         }
+        ddd($drivers);
+        return $drivers;
     }
 }
