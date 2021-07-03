@@ -31,7 +31,7 @@ class Controller extends BaseController
         foreach ($races as $race) {
             foreach ($race['race_results'] as $key => $value) {
                 $slug = basename($value['driver']);
-                $d = $drivers->where('lastname',  ucfirst($slug));
+                $d = $drivers->where('lastname', ucfirst($slug));
 
                 switch ($key) {
                     case 1:
@@ -81,6 +81,7 @@ class Controller extends BaseController
             }
             $i += 1;
         }
+        $drivers = collect($drivers)->sortByDesc('points')->all();
         return $drivers;
     }
 }

@@ -77,12 +77,13 @@
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
+                            @php $i = 1; @endphp
                             @foreach ($drivers as $index => $element)
                             <tr>
                                 <td class="px-3 py-4 whitespace-nowrap">
                                     <div class="ml-3">
                                         <div class="text-sm font-medium text-gray-900 text-xl font-formula">
-                                            {{$index + 1}}
+                                            {{ $i }}
                                         </div>
                                     </div>
                                 </td>
@@ -109,17 +110,30 @@
                                     <div class="text-sm text-gray-500"></div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full bg-green-200 text-black-800 font-formula">
-                                      🏆 {{$element['points']}} pts
+                                    @if($i <= 10)
+                                        @php $color = 'bg-green-200' @endphp
+                                    @elseif($i <= 15 && $i > 10)
+                                        @php $color = 'bg-yellow-100' @endphp
+                                    @else
+                                        @php $color = 'bg-red-200' @endphp
+                                    @endif
+                                    <span class="px-2 inline-flex text-xs leading-5 font-regular rounded-full {{$color}} text-black-800 font-formula">
+                                        @if($i == 1)
+                                            🏆 {{$element['points']}} pts
+                                        @else
+                                            {{$element['points']}} pts
+                                        @endif
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                     Circuit Paul Ricard, France
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    @php $slug = strtolower($element['lastname']); @endphp
+                                    <a href="http://127.0.0.1:8000/api/driver/{{$slug}}" class="text-indigo-600 hover:text-indigo-900">Query API</a>
                                 </td>
                             </tr>
+                            @php $i += 1; @endphp
                             @endforeach
 
                             <!-- More people... -->
