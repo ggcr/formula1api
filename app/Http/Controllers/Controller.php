@@ -25,7 +25,8 @@ class Controller extends BaseController
             foreach ($race['race_results'] as $key => $value) {
                 $request = Request::create(parse_url($value['driver'])['path'], 'GET');
                 $r = app()->handle($request)->getContent();
-                $json = json_decode($r,true)[0];
+                $json = json_decode($r,true);
+                var_dump($json);
                 $driver = $drivers->where('id', $json['id']);
                 switch ($key) {
                     case 1:
