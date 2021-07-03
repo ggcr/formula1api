@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DriverController;
 use \App\Http\Controllers\RacesController;
+use \App\Http\Controllers\SeasonController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,10 +27,10 @@ Route::put('/race/{id}', [RacesController::class, 'update']);
 Route::delete('/race/{id}', [RacesController::class, 'destroy']);
 Route::get('/race/{season}', [RacesController::class, 'GetSeasonRaces']);
 
-Route::get('/', function() {
+Route::get('/season/{year}', function(string $year) {
     return response()->json([
-        'drivers' => 'http://127.0.0.1:9999/api/driver',
-        'races' => 'http://127.0.0.1:9999/api/race',
+        'drivers' => 'http://127.0.0.1:8000/api/driver',
+        'races' => (new App\Http\Controllers\SeasonController)->seasonRaces($year)
     ]);
 });
 

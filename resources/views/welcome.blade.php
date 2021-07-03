@@ -89,15 +89,17 @@
                                 <td class="px-4 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-20 w-20">
-                                            <img class="h-20 w-20 rounded-b-3xl" src="/img/verstappen.png" alt="">
+                                            <img class="h-20 w-20 rounded-b-3xl" src="{!! $element['image_url'] !!}" alt="">
                                         </div>
                                         <div class="ml-4">
                                             <div class="text-sm font-regular text-gray-900 font-formula">
+                                                <span>
                                                 @if($element['apodo'] != null)
-                                                {{ $element['name'] . ' ' . '"' . strtoupper($element['apodo']) . '"' .' ' . $element['lastname'] }}
+                                                    {{ $element['name'] . ' ' . '"' . strtoupper($element['apodo']) . '"' .' ' . $element['lastname'] }}
                                                 @else
                                                     {{ $element['name'] . ' ' . strtoupper($element['lastname']) }}
                                                 @endif
+                                                <img class="float-right ml-2 mt-0.5" src="https://www.countryflags.io/{{$element['nationality']}}/flat/16.png"/>
                                             </div>
 
                                         </div>

@@ -16,7 +16,6 @@ class Driver extends Model
         'apodo',
         'nationality',
         'number',
-        'number_url',
         'image_url'
     ];
 }

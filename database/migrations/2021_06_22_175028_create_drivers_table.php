@@ -20,7 +20,6 @@ class CreateDriversTable extends Migration
             $table->string('apodo')->nullable();
             $table->string('nationality');
             $table->integer('number');
-            $table->string('number_url');
             $table->string('image_url');
             $table->timestamps();
         });

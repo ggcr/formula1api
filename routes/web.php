@@ -18,9 +18,8 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    (new App\Http\Controllers\Controller)->calculatePointsForAllDrivers('2020');
+    $d = Driver::all();
     return view('welcome', [
-        'drivers' => $d,
-        'races' => $r
+        'drivers' => $d
     ]);
 });

@@ -34,6 +34,7 @@ class DriverController extends Controller
             'number_url' => 'required',
             'image_url' => 'required'
         ]);
+
         return Driver::create($request->all());
     }
 
