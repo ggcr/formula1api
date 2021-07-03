@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    $d = (new Controller)->calculatePointsForAllDrivers();
+    //$d = (new Controller)->calculatePointsForAllDrivers();
+    $d = Driver::all();
     return view('welcome', [
         'drivers' => $d
     ]);
