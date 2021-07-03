@@ -14,10 +14,18 @@ use \App\Http\Controllers\RacesController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/driver', [DriverController::class, 'index']);
+Route::post('/driver', [DriverController::class, 'store']);
+Route::put('/driver/{id}', [DriverController::class, 'update']);
+Route::delete('/driver/{id}', [DriverController::class, 'destroy']);
+Route::get('/driver/{name}', [DriverController::class, 'search']);
 
-Route::resource('driver', DriverController::class);
-Route::resource('race', RacesController::class);
-Route::get('/driver/search/{name}', [DriverController::class, 'search']);
+Route::get('/race', [RacesController::class, 'index']);
+Route::post('/race', [RacesController::class, 'store']);
+Route::put('/race/{id}', [RacesController::class, 'update']);
+Route::delete('/race/{id}', [RacesController::class, 'destroy']);
+Route::get('/race/{season}', [RacesController::class, 'GetSeasonRaces']);
+
 Route::get('/', function() {
     return response()->json([
         'drivers' => 'http://127.0.0.1:9999/api/driver',

@@ -2,6 +2,7 @@
 
 use App\Models\Driver;
 use \App\Models\Races;
+use \App\Http\Controllers\RacesController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
@@ -17,8 +18,7 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    $d = Driver::all();
-    $r = Races::all();
+    (new App\Http\Controllers\Controller)->calculatePointsForAllDrivers('2020');
     return view('welcome', [
         'drivers' => $d,
         'races' => $r

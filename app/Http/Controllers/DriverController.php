@@ -38,17 +38,6 @@ class DriverController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return Driver::find($id);
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -85,6 +74,6 @@ class DriverController extends Controller
      */
     public function search($name)
     {
-        return Driver::where('name', 'like', '%'.$name.'%')->get();
+        return Driver::where('lastname', $name)->get();
     }
 }

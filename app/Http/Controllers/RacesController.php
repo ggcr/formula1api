@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Driver;
 use App\Models\Races;
 use Illuminate\Http\Request;
 
@@ -81,11 +82,11 @@ class RacesController extends Controller
     /**
      * Search for a name.
      *
-     * @param  str name
+     * @param  int season
      * @return \Illuminate\Http\Response
      */
-    public function search($name)
+    public function GetSeasonRaces(int $season)
     {
-        return Races::where('race_name', 'like', '%'.$name.'%')->get();
+        return Races::orderBy('date', 'asc')->where('season', '=', $season)->get();
     }
 }
