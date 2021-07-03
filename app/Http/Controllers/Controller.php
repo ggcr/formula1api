@@ -16,6 +16,13 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    /**
+     * Search for a name.
+     *
+     * @param  str name
+     * @return Driver[]|\Illuminate\Database\Eloquent\Collection|\Illuminate\Http\Response
+     */
+
     public function calculatePointsForAllDrivers()
     {
         $races = Races::all('race_results')->toArray();
@@ -23,10 +30,9 @@ class Controller extends BaseController
         $i = 0;
         foreach ($races as $race) {
             foreach ($race['race_results'] as $key => $value) {
-                $request = Request::create(parse_url($value['driver'])['path'], 'GET');
-                $response = json_decode(app()->handle($request)->getContent(), true);
-                $reset_resp = reset($response);
-                $driver = $drivers->where('id', $reset_resp['id']);
+                $slug = basename($value['driver']);
+                $d = $drivers->where('lastname',  ucfirst($slug));
+
                 switch ($key) {
                     case 1:
                         $points = 25;
@@ -63,19 +69,15 @@ class Controller extends BaseController
                         break;
                 }
 
-                if(!isset($driver->first()['points'])) {
-                    $driver->first()['points'] = $points;
+                if(!isset($d->first()['points'])) {
+                    $d->first()['points'] = $points;
                 } else {
-                    $driver->first()['points'] += $points;
+                    $d->first()['points'] += $points;
                 }
 
-
-
-                if (!isset($driver->first()['team_name'])) {
-                    $driver->first()['team_name'] = $value['team'];
+                if (!isset($d->first()['team_name'])) {
+                    $d->first()['team_name'] = $value['team'];
                 }
-
-
             }
             $i += 1;
         }
