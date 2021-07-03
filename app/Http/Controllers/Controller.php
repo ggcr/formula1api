@@ -26,8 +26,7 @@ class Controller extends BaseController
                 $request = Request::create(parse_url($value['driver'])['path'], 'GET');
                 $r = app()->handle($request)->getContent();
                 $json = json_decode($r,true);
-                dump($json);
-                $driver = $drivers->where('id', $json['id']);
+                $driver = $drivers->where('id', $json[0]['id']);
                 switch ($key) {
                     case 1:
                         $points = 25;
