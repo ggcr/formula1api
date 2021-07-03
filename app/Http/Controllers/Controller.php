@@ -24,9 +24,9 @@ class Controller extends BaseController
         foreach ($races as $race) {
             foreach ($race['race_results'] as $key => $value) {
                 $request = Request::create(parse_url($value['driver'])['path'], 'GET');
-                $r = json_decode(app()->handle($request)->getContent(), true);
-                $driver = $drivers->where('id', $r[0]['id']);
-
+                $r = app()->handle($request)->getContent();
+                $json = json_decode($r,true)[0];
+                $driver = $drivers->where('id', $json['id']);
                 switch ($key) {
                     case 1:
                         $points = 25;
@@ -63,22 +63,22 @@ class Controller extends BaseController
                         break;
                 }
 
-                if (isset($driver['points'])) {
-                    $driver->points += $points;
-                }
-                else {
-                    $driver->points = $points;
+                if(!isset($driver->first()['points'])) {
+                    $driver->first()['points'] = $points;
+                } else {
+                    $driver->first()['points'] += $points;
                 }
 
-                if (!isset($driver['team_name'])) {
-                    $driver->team_name = $value['team'];
+
+
+                if (!isset($driver->first()['team_name'])) {
+                    $driver->first()['team_name'] = $value['team'];
                 }
 
 
             }
             $i += 1;
         }
-        ddd($drivers);
         return $drivers;
     }
 }
