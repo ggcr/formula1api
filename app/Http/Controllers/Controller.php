@@ -75,7 +75,8 @@ class Controller extends BaseController
                     $d->first()['points'] += $points;
                 }
 
-                if($value['fastest_lap']) {
+                if($value['fastest_lap'] == true) {
+                    ddd($d);
                     $d->first()['points'] += 1;
                 }
 
