@@ -75,6 +75,10 @@ class Controller extends BaseController
                     $d->first()['points'] += $points;
                 }
 
+                if($value['fastest_lap']) {
+                    $d->first()['points'] += 1;
+                }
+
                 if (!isset($d->first()['team_name'])) {
                     $d->first()['team_name'] = $value['team'];
                 }
