@@ -75,6 +75,6 @@ class DriverController extends Controller
      */
     public function search($name)
     {
-        return Driver::where('lastname', 'LIKE', $name)->get();
+        return Driver::where('lastname', ucfirst($name))->get();
     }
 }
