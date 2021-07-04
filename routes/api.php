@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DriverController;
 use \App\Http\Controllers\RacesController;
 use \App\Http\Controllers\SeasonController;
+use Illuminate\Support\Facades\URL;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,8 +31,8 @@ Route::get('/race/{season}', [RacesController::class, 'GetSeasonRaces']);
 
 Route::get('/', function() {
     return response()->json([
-        'drivers' => 'http://127.0.0.1:8000/api/driver',
-        'races' => 'http://127.0.0.1:8000/api/race'
+        'drivers' => URL::current() .  '/api/driver',
+        'races' => URL::current() . '/api/race'
     ]);
 });
 
