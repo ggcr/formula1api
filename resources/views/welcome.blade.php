@@ -16,8 +16,8 @@
 <body class="antialiased bg-pink-pattern w-screen overflow-x-hidden bg-whiteWave">
 <section class="mx-6 h-screen">
     <nav class="w-screen font-poppins font-semibold text-lg pb-12 pt-5">
-        <a class="pr-10 lg:pr-20 float-right" href="#">ABOUT</a>
-        <a class="px-8 float-right" href="#">DOCS</a>
+        <a target="_blank" class="pr-10 lg:pr-20 float-right" href="#">ABOUT</a>
+        <a target="_blank" class="px-8 float-right" href="#">DOCS</a>
     </nav>
     <header class="static">
         <div class="z-10 select-text font-formula text-titlePink font-medium lg:static lg:w-1/2 sm:static md:static md:w-auto lg:ml-28 lg:mt-24">
@@ -32,13 +32,17 @@
             <p>The <strong><a href="https://www.formula1.com/" target="_blank">FORMULA 1</a></strong> API is a RESTful and GraphQL API made as an <u>educational</u> project by a trully fan of the sport.</p>
         </div>
         <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:static sm:static lg:w-2/5 lg:ml-0 lg:mt-0">
-            <button class="z-10 inline-block	bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
-                Try REST
+            <button class="z-10 inline-block bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
+                <a href="http://127.0.0.1:8000/api" target="_blank">
+                    Try REST
                 <img src="/img/link.png" class="h-5 lg:h-6 float-right -mr-2" alt="Link image.">
+                </a>
             </button>
-            <button class="z-10 inline-block	bg-purple-300 px-8 lg:px-10 py-3 lg:py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 md:mr-5">
+            <button class="z-10 inline-block bg-purple-300 px-8 lg:px-10 py-3 lg:py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 md:mr-5">
+                <a href="http://127.0.0.1:8000/api" target="_blank">
                 Try GraphQL
                 <img src="/img/link.png" class="h-5 lg:h-6  float-right -mr-2" alt="Link image.">
+                </a>
             </button>
         </div>
         <div class="ml-2 w-full mt-5 lg:mt-32 lg:relative">
@@ -130,7 +134,7 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     @php $slug = strtolower($element['lastname']); @endphp
-                                    <a href="http://127.0.0.1:8000/api/driver/{{$slug}}" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    <a href="http://127.0.0.1:8000/api/driver/{{$slug}}" target="_blank" class="text-indigo-600 hover:text-indigo-900">Query API</a>
                                 </td>
                             </tr>
                             @php $i += 1; @endphp
