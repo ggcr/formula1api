@@ -31,8 +31,8 @@ Route::get('/race/{season}', [RacesController::class, 'GetSeasonRaces']);
 
 Route::get('/', function() {
     return response()->json([
-        'drivers' => URL::current() .  '/api/driver',
-        'races' => URL::current() . '/api/race'
+        'drivers' => URL::current() .  '/driver',
+        'races' => URL::current() . '/race'
     ]);
 });
 
