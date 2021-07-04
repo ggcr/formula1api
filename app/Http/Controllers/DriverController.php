@@ -71,10 +71,10 @@ class DriverController extends Controller
      * Search for a name.
      *
      * @param  str name
-     * @return \Illuminate\Http\Response
+     *
      */
     public function search($name)
     {
-        return Driver::where('lastname', $name)->get();
+        return Driver::where('lastname', 'LIKE', $name)->get();
     }
 }
