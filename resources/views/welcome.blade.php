@@ -34,13 +34,13 @@
         </div>
         <div class="z-10 font-poppins text-titlePink font-regular text-center mt-5 w-full ml-2 lg:static lg:ml-44 lg:mt-10 md:static sm:static lg:w-2/5 lg:ml-0 lg:mt-0">
             <button class="z-10 inline-block bg-purple-300 px-11 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 lg:px-14 py-3 lg:py-4 lg:mr-5">
-                <a href="http://127.0.0.1:8000/api" target="_blank">
+                <a href="https://fast-bastion-39170.herokuapp.com/api" target="_blank">
                     Try REST
                 <img src="/img/link.png" class="h-5 lg:h-6 float-right -mr-2" alt="Link image.">
                 </a>
             </button>
             <button class="z-10 inline-block bg-purple-300 px-8 lg:px-10 py-3 lg:py-4 text-base shadow-sm font-medium tracking-wider border text-black rounded-full hover:shadow-lg hover:bg-purple-400 md:mr-5">
-                <a href="http://127.0.0.1:8000/api" target="_blank">
+                <a href="https://fast-bastion-39170.herokuapp.com/api" target="_blank">
                 Try GraphQL
                 <img src="/img/link.png" class="h-5 lg:h-6  float-right -mr-2" alt="Link image.">
                 </a>
@@ -135,7 +135,7 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     @php $slug = strtolower($element['lastname']); @endphp
-                                    <a href="http://127.0.0.1:8000/api/driver/{{$slug}}" target="_blank" class="text-indigo-600 hover:text-indigo-900">Query API</a>
+                                    <a href="https://fast-bastion-39170.herokuapp.com/api/driver/{{$slug}}" target="_blank" class="text-indigo-600 hover:text-indigo-900">Query API</a>
                                 </td>
                             </tr>
                             @php $i += 1; @endphp
