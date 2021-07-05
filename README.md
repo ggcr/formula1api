@@ -3,6 +3,7 @@
 ![output](./public/img/UI-landing.png)
 
 # To-Do
+- Hacer la landing page con la tabla mas corta y poner DRIVERS: RACES: SEASONS: y made by...
 - Añadir pestañas en la Grid para DRIVER CHAMPIONSHIP y TEAM CHAMPIONSHIP.
 - Añadir tabs para distintos años y SEASONS.
 - Automatizar con blade laravel.
